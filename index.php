@@ -42,7 +42,19 @@ $router = new Router();
             $router->addRoute('/user/registerDone', function () {
                 require_once( __DIR__ .'/Pages/users/registerDone.php');
             });
-            
+
+           $router->addRoute('/addToCart', function () {
+           require_once( __DIR__ .'/Pages/addToCart.php');
+           });
+
+               $router->addRoute('/checkout', function () { 
+           require_once( __DIR__ .'/Pages/checkout.php');
+           });
+
+            $router->addRoute('/checkoutsuccess', function () {
+            require_once( __DIR__ .'/Pages/checkoutsuccess.php');
+           });
+
             
 $router->dispatch();
 ?>

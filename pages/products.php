@@ -33,7 +33,7 @@ $products = $dbContext->getCategoryProducts($categoryName);
 <div class="info container" >
                     <h2><?= htmlspecialchars($product->title) ?></h2>
                     <p>Price: <?= number_format($product->price, 2) ?> kr</p>
-                    <a href="info?id=<?= $product->id ?>" class="btn">Visa produkt</a>
+                    <a href="info?id=<?= $product->id ?>" class="btn-visaprodukt">Visa produkt</a>
 </div>
                 </div>
             <?php endforeach; ?>

@@ -41,6 +41,13 @@ if (!$product) {
             <h1><?= htmlspecialchars($product->title) ?></h1>
             <p><?= htmlspecialchars($product->description)?></p>
             <p><strong>Pris:</strong> <?= number_format($product->price, 2) ?> kr</p>
+             <div class="addcart-container">
+                                    <form method="GET" action="/addToCart">
+                                        <input type="hidden" name="productId" value="<?php echo $product->id; ?>">
+                                        <input type="hidden" name="fromPage" value="<?php echo $_SERVER['REQUEST_URI'] ?>">
+                                        <button type="submit" class="addtocart-button">Add to cart</button>
+                                    </form>
+                                </div>
           
             
         </div>

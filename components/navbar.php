@@ -1,9 +1,25 @@
 <?php
-require_once(__DIR__ . '/../models/Database.php');
+require_once("models/Database.php");
+require_once("models/Cart.php");
 
 function navBar() {
     $db = new Database();
+
+    $userId = null;
+$session_id = null;
+
+if($db->getUsersDatabase()->getAuth()->isLoggedIn()){
+    $userId = $db->getUsersDatabase()->getAuth()->getUserId();
+}
+    //$cart = $dbContext->getCartByUser($userId);
+$session_id = session_id();
+
+$cart = new Cart($db, $session_id, $userId);
+
+
     $categories = $db->getAllCategories();
+
+    
 ?>
     <link rel="stylesheet" href="../styles/navbar.css">
     
@@ -11,7 +27,7 @@ function navBar() {
         <ul class="nav-links">
             <div class="logo">
             
-            <?php echo '<a href="/"><img src="/public/images/nav-logo.png" alt="Logo" /></a>'; ?>
+            <?php echo '<a class="logo-img" href="/"><img src="/public/images/nav-logo.png" alt="Logo" /></a>'; ?>
 
             </div>
 
@@ -44,11 +60,20 @@ function navBar() {
     <input type="text" name="q" placeholder="search" class="form-control" />
     <button type="submit" class="search-button">Search</button>
 </form>
-</div>        </ul>
-        
 
-        
-    </nav>
+<form class="">
+                        <a class="" href="/addToCart">
+                            <i class=""></i>
+                            Cart
+                            <span id="cartCount" class="">
+                                <a href="/checkout" onclick="onCheckout()" class="btn btn-success">Checkout</a>
+                                <?php echo $cart->getItemsCount() ?></span>
+                        </a>
+                    </form>
+
+     </div>       
+    </ul>
+   </nav>
 <?php
 }
 ?>

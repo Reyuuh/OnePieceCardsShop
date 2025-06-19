@@ -1,12 +1,11 @@
 .product-grid {
-    display: flex;           
-    flex-wrap: wrap;      
-    gap: 20px;               
-    justify-items: center;
-    align-items: center;
-    padding: 3rem;
-    align-items: stretch;
-    
+display: flex;
+justify-content: center;
+padding: 7rem;
+gap: 3rem;
+}
+.product-title {
+   text-align: center;
 }
 
 .product-card {
@@ -19,5 +18,14 @@
     justify-content: space-between;
    padding: 10px;
     
-    
+}
+
+.btn-visaprodukt {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    justify-content: center;
 }
