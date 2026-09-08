@@ -35,7 +35,7 @@ Styles follow a layered approach:
 ## Installation
 1. Clone the repo
 2. Run `composer install`
-3. Create a MySQL database and import the schema
+3. Create a MySQL database and import the schema: `mysql -u root -p your_database_name < database/schema.sql`
 4. Copy `.env.example` to `.env` and fill in your DB and Stripe credentials
 5. Serve locally with the PHP built-in server or a local stack (XAMPP, Laragon, etc.)
 
