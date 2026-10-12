@@ -18,6 +18,11 @@
     animation: ticker-ltr 18s linear infinite;
 }
 
+.Popular {
+    display: flex;
+    justify-content: center;
+}
+
 @keyframes ticker-ltr {
     0%   { transform: translateX(-100%); }
     100% { transform: translateX(100vw); }
@@ -26,15 +31,27 @@
 /* ── Promo image ────────────────────────────── */
 
 .promo-art {
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    max-width: 1600px;     /* bildens egen bredd, så den inte blir suddig */
+    margin: 0 auto 50px;   /* centrera */
+    aspect-ratio: 16 / 9;
 }
 
 .promo-art img {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+}
+@media (min-width: 1440px) {
+  
+.promo-art {
+width: 100%;         
+    aspect-ratio: 16 / 9;
+    max-height: 600px;
     margin-bottom: 50px;
-    filter: brightness(0.75);
+
+
 }
 
+}

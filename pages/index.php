@@ -27,12 +27,15 @@ $popularProducts = $dbContext->getPopularProducts(); // Hämta populära produkt
 
     <div class="promo-art">
         
-        <img src="/public/images/public/images/one-piece-card-game-tcg-gear-5-luffy.jpg" alt="Promo">
+        <img src="/public/images/one-piece-card-game-tcg-gear-5-luffy.png" alt="Promo">
     </div>
 
     <section class="products">
+       
         <div class="container">
-            <div class="product-grid">
+                      <h1 class="Popular">Popular cards</h1>
+            <div class="product-grid"> 
+      
                 <?php foreach($popularProducts as $products): ?>
                     <div class="product-card">
                         <?php if($products->price < 10): ?>
