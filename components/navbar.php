@@ -55,11 +55,26 @@ function navBar() {
             </form>
 
             <a href="/checkout" class="cart-link">
-                Cart (<?= $cart->getItemsCount() ?>)
+                Cart (<span id="cart-count"><?= $cart->getItemsCount() ?></span>)
             </a>
         </div>
 
     </nav>
+
+    <aside id="mini-cart" class="mini-cart" aria-live="polite">
+        <h4 class="mini-cart-title">Your cart</h4>
+        <ul class="mini-cart-items">
+      <?php foreach ($cart->getItems() as $item): ?>
+        <li class="mini-cart-item">
+            <span class="mini-cart-name"><?= htmlspecialchars($item->productName) ?></span>
+            <span class="mini-cart-qty">* <?= $item->quantity ?></span>
+            <span class="mini-cart-price"><?= number_format($item->rowPrice, 2) ?> kr</span>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+        <p class="mini-cart-total">Total: <?= number_format($cart->getTotalPrice(), 2) ?> kr</p>
+        <a href="/checkout" class="btn-product"> Go to checkout</a>
+    </aside>
 <?php
 }
 ?>

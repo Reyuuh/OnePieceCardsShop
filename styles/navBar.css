@@ -129,6 +129,26 @@
     background: var(--color-primary-dark);
 }
 
+.mini-cart {
+    position: fixed;
+    top: 90px;
+    right: 1rem;
+    width: 320px;
+    max-width: calc(100vw - 2rem);
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+
+    transform: translateX(calc(100% + 2rem));
+    transition: transform 0.3s ease;
+}
+
+.mini-cart.is-open {
+    transform: translateX(0);
+}
+
 .cart-link {
     display: flex;
     align-items: center;
@@ -146,6 +166,8 @@
     background-color: var(--color-primary-light);
     color: var(--color-text-on-dark);
 }
+
+
 
 /* ── Mobile ────────────────────────────────── */
 

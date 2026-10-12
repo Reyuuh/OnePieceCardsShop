@@ -19,5 +19,22 @@ $session_id = session_id();
 $cart = new Cart($dbContext, $session_id, $userId);
 $cart->addItem($productId, 1);
 
+if (($_GET['ajax'] ?? '') === '1') {
+    $cart = new Cart($dbContext, $session_id, $userId);
+
+    header('Content-Type: application/json');
+    echo json_encode([
+        'count' => $cart->getItemsCount(),
+        'total' => $cart->getTotalPrice(),
+        'items' => array_map(fn($item) =>  [
+            'name'     => $item->productName,
+            'quantity' => $item->quantity,
+            'price'    => (float) $item->rowPrice,
+
+        ], $cart->getItems()),
+    ]);
+    exit;
+}
+
 header("Location: $fromPage");
 ?>

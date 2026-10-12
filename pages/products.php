@@ -45,7 +45,7 @@ $products = $dbContext->getCategoryProducts($categoryName);
                                     <a href="/info?id=<?= $product->id ?>" class="btn-product">Show product</a>
                                 </div>
                                 <div class="add-cart-container">
-                                    <form method="GET" action="/addToCart">
+                                    <form class="form-addtocart" method="GET" action="/addToCart">
                                         <input type="hidden" name="productId" value="<?= $product->id ?>">
                                         <input type="hidden" name="fromPage" value="<?= htmlspecialchars($_SERVER['REQUEST_URI']) ?>">
                                         <button type="submit" class="add-to-cart-btn">Add to cart</button>

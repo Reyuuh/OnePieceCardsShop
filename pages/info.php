@@ -30,7 +30,9 @@ if (!$product) {
     <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/productInfo.css">
+    
 </head>
+
 <body>
 
 <?php navBar(); ?>
@@ -45,7 +47,7 @@ if (!$product) {
             <p><?= htmlspecialchars($product->description) ?></p>
             <p><strong>Price:</strong> <?= number_format($product->price, 2) ?> kr</p>
             <div class="add-cart-container">
-                <form method="GET" action="/addToCart">
+                <form  class="form-addtocart" method="GET" action="/addToCart">
                     <input type="hidden" name="productId" value="<?= $product->id ?>">
                     <input type="hidden" name="fromPage" value="<?= htmlspecialchars($_SERVER['REQUEST_URI']) ?>">
                     <button type="submit" class="add-to-cart-btn">Add to cart</button>
@@ -56,6 +58,6 @@ if (!$product) {
 </section>
 
 <?php footer(); ?>
-
+<script src="/scripts/cart.js"></script>
 </body>
 </html>
