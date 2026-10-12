@@ -38,8 +38,7 @@ class Database {
         $this->usersDatabase->setupUsers();
         $this->usersDatabase->seedUsers();
     }
-    
-    // i Database.php
+
 function getPdo() {
     return $this->pdo;
 }

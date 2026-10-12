@@ -27,7 +27,7 @@ $popularProducts = $dbContext->getPopularProducts(); // Hämta populära produkt
 
     <div class="promo-art">
         
-        <img src="/public/images/hithere.png" alt="Promo">
+        <img src="/public/images/public/images/one-piece-card-game-tcg-gear-5-luffy.jpg" alt="Promo">
     </div>
 
     <section class="products">
