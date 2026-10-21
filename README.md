@@ -39,5 +39,5 @@ Styles follow a layered approach:
 4. Copy `.env.example` to `.env` and fill in your DB and Stripe credentials
 5. Serve locally with the PHP built-in server or a local stack (XAMPP, Laragon, etc.)
 
-## Screenshots
+## Demo
 ![Shop](./public/images/demo.gif)
