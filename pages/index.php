@@ -3,7 +3,7 @@ require_once("components/navbar.php");
 require_once("components/footer.php");
 require_once("models/Database.php");
 require_once("models/Product.php"); 
-require_once("components/SingleProduct.php");
+require_once("components/singleProduct.php");
 require_once("components/ticker.php");
 
 $dbContext = new Database(); // Anslut till databasen

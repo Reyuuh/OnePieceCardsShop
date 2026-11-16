@@ -1,10 +1,10 @@
 <?php
-require_once('Models/Product.php');
-require_once("components/Footer.php");
+require_once('models/Product.php');
+require_once("components/footer.php");
 require_once("components/navbar.php");
-require_once('Models/Database.php');
-require_once("Models/Cart.php");
-require_once("components/SingleProduct.php");
+require_once('models/Database.php');
+require_once("models/Cart.php");
+require_once("components/singleProduct.php");
 
 $dbContext = new Database();
 

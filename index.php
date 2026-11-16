@@ -1,5 +1,5 @@
 <?php 
-require_once("Utils/router.php");
+require_once("utils/router.php");
 require_once("vendor/autoload.php");
 
 $dotenv = Dotenv\Dotenv::createImmutable(".");
@@ -8,51 +8,51 @@ $dotenv->load();
 
 $router = new Router();
         $router->addRoute('/', function () {
-        require_once(__DIR__ .'/Pages/index.php');
+        require_once(__DIR__ .'/pages/index.php');
         });
 
 
      
         $router->addRoute('/products', function () {
-        require_once(__DIR__ .'/Pages/products.php');
+        require_once(__DIR__ .'/pages/products.php');
         });
 
 
         $router->addRoute('/info', function() {
-         require __DIR__ . '/Pages/info.php';
+         require __DIR__ . '/pages/info.php';
         });    
 
 
         $router->addRoute('/search', function() {
-                require __DIR__ . '/Pages/search.php';
+                require __DIR__ . '/pages/search.php';
                });            
 
         $router->addRoute('/user/login', function () {
-        require_once( __DIR__ .'/Pages/users/login.php');
+        require_once( __DIR__ .'/pages/users/login.php');
         });
 
         $router->addRoute('/user/logout', function () {
-                require_once( __DIR__ .'/Pages/users/logout.php');
+                require_once( __DIR__ .'/pages/users/logout.php');
             });
 
             $router->addRoute('/user/register', function () {
-                require_once( __DIR__ .'/Pages/users/register.php');
+                require_once( __DIR__ .'/pages/users/register.php');
             });
 
             $router->addRoute('/user/registerDone', function () {
-                require_once( __DIR__ .'/Pages/users/registerDone.php');
+                require_once( __DIR__ .'/pages/users/registerDone.php');
             });
 
            $router->addRoute('/addToCart', function () {
-           require_once( __DIR__ .'/Pages/addToCart.php');
+           require_once( __DIR__ .'/pages/addToCart.php');
            });
 
                $router->addRoute('/checkout', function () { 
-           require_once( __DIR__ .'/Pages/checkout.php');
+           require_once( __DIR__ .'/pages/checkout.php');
            });
 
             $router->addRoute('/checkoutsuccess', function () {
-            require_once( __DIR__ .'/Pages/checkoutsuccess.php');
+            require_once( __DIR__ .'/pages/checkoutSuccess.php');
            });
 
             

@@ -1,9 +1,9 @@
 <?php
-require_once('Models/Product.php');
-require_once("components/Footer.php");
-require_once('Models/Database.php');
+require_once('models/Product.php');
+require_once("components/footer.php");
+require_once('models/Database.php');
 require_once("components/navbar.php");
-require_once('Utils/validator.php');
+require_once('utils/validator.php');
 
 $dbContext = new Database();
 

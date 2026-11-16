@@ -1,5 +1,5 @@
 <?php 
-function SingleProduct($prod) { ?>
+function singleProduct($prod) { ?>
 <div class="">
 <div class="">
     <?php if($prod->price < 10) {  ?>

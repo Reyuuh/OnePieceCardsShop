@@ -1,5 +1,5 @@
 <?php
-function CartCount($dbContext){
+function cartCount($dbContext){
     $cartCount = 0;
     
 ?>

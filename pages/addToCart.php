@@ -1,7 +1,7 @@
 <?php
 
-require_once("Models/Database.php");
-require_once("Models/Cart.php");
+require_once("models/Database.php");
+require_once("models/Cart.php");
 
 $dbContext = new Database();
 
